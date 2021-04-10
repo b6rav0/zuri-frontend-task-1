@@ -1,0 +1,285 @@
+body {
+    background: #ccc;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.wrapper {
+    width: 80%;
+    margin: 10rem auto;
+    padding: 5%;
+    background: white;
+    border-radius: 1em;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+form {
+    margin-top: 10%;
+}
+
+/* Universal styling for all the input fields in the form */
+form input {
+    padding: 0 20px;
+    font-size: 1em;
+}
+
+h4 {
+    display: block;
+    margin: 5% 0 2%;
+    font-size: 1.4em;
+}
+
+/* Account Fields */
+div.input-group:first-of-type div.input-box,
+div.input-group:nth-of-type(2) div.input-box,
+div.input-group:nth-of-type(5) div.input-box, /* Credit Card Fields */
+div.input-group:nth-of-type(6) div.input-box:first-of-type {
+    display: flex;
+    width: 100%;
+    height: 2.5em;
+    margin: 2% 0;
+    border: 1px solid #ccc;
+    transition: 0.3s ease-in-out;
+}
+
+div.input-group:first-of-type div.input-box input,
+div.input-group:nth-of-type(2) div.input-box input,
+div.input-group:nth-of-type(5) div.input-box input,
+div.input-group:nth-of-type(6) div.input-box input {
+    flex: 90%;
+    border: none;
+}
+
+div.input-group:first-of-type div.input-box i,
+div.input-group:nth-of-type(2) div.input-box i,
+div.input-group:nth-of-type(5) div.input-box i,
+div.input-group:nth-of-type(6) div.input-box i {
+    flex: 10%;
+    padding-top: 0.7%;
+    color: white;
+    background: black;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    transition: 0.3s ease-in-out;
+}
+
+/* Animation on hover */
+
+div.input-group:first-of-type div.input-box:hover,
+div.input-group:nth-of-type(2) div.input-box:hover,
+div.input-group:nth-of-type(5) div.input-box:hover,
+div.input-group:nth-of-type(6) div.input-box:first-of-type:hover {
+    border: 1px solid black;
+}
+
+div.input-group:first-of-type div.input-box input:hover + i,
+div.input-group:nth-of-type(2) div.input-box input:hover + i,
+div.input-group:nth-of-type(5) div.input-box input:hover + i,
+div.input-group:nth-of-type(6) div.input-box input:hover + i {
+    border-left: 1px solid black;
+    color: black;
+    background: white;
+}
+
+
+/* Full Name and Username */
+div.input-group:first-of-type {
+    display: flex;
+}
+
+div.input-group:first-of-type div.input-box {
+    flex: 50%;
+}
+
+/* Full Name */
+div.input-group:first-of-type div.input-box:first-of-type {
+    margin-right: 5%;
+}
+
+/* Date of Birth Fields */
+div.input-group:nth-of-type(3) div.input-box:first-of-type input {
+    width: 29.5%;
+    height: 2.5em;
+    margin: 0 2.5%;
+    text-align: center;
+}
+
+/* Remove the margin-left from the Day field */
+div.input-group:nth-of-type(3) div.input-box:first-of-type input:first-of-type {
+    margin-left: 0;
+}
+
+/* Remove the margin-right from the Year Field */
+div.input-group:nth-of-type(3) div.input-box:first-of-type input:last-of-type {
+    margin-right: 0;
+    float: right;
+}
+
+/* Gender */
+div.input-group:nth-of-type(3) div.input-box:nth-of-type(2) input {
+    display: inline-block;
+}
+
+div.input-group:nth-of-type(3) div.input-box:nth-of-type(2) label {
+    font-size: 1.2em;
+}
+
+/* Radio Option: Female */
+div.input-group:nth-of-type(3) div.input-box:nth-of-type(2) input#b2 {
+    margin-left: 85%;
+}
+
+
+/* Payment Details */
+div.input-group:nth-of-type(4) {
+    margin-top: 5%;
+    border-top: 5px solid black;
+    text-align: center;
+}
+
+/* Credit Card / Paypal */
+div.input-group:nth-of-type(4) input {
+    margin-right: 5px;
+}
+
+/* Paypal */
+div.input-group:nth-of-type(4) input#bc2 {
+    margin-left: 55%;
+}
+
+/* Credit Card Number */
+div.input-group:nth-of-type(5) div.input-box input{
+    text-align: center;
+}
+
+/* CVC */
+div.input-group:nth-of-type(6) div.input-box:first-of-type {
+    float: left;
+    width: 50%;
+}
+
+div.input-group:nth-of-type(6) div.input-box:nth-of-type(2) {
+    float: right;
+    display: flex;
+    width: 50%;
+    height: 2.5em;
+    margin: 2% 0;
+    padding-left: 5%;
+}
+
+div.input-group:nth-of-type(6) div.input-box:nth-of-type(2) select {
+    flex: 50%;
+    padding: 0 20px;
+}
+
+
+/* Pay Now Button */
+button[type = 'submit'] {
+    display: block;
+    width: 20%;
+    height: 3.5em;
+    margin: 15% 0 0;
+    border: 1px solid black;
+    font-size: 1em;
+    color: white;
+    background: black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    color: black;
+    background: white;
+}
+
+
+/* Responsiveness */
+@media (max-width: 800px) {
+    div.wrapper {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    i { /* Using !important to override the specificity everywhere */
+        padding-top: 1.5% !important;
+        font-size: 1.2em !important;
+    }
+
+    h4 {
+        margin-bottom: 5%;
+    }
+
+    /* Account fields */
+    div.input-group:first-of-type {
+        display: block;
+    }
+
+    div.input-group:first-of-type div.input-box {
+        margin: 5% 0;
+    }
+
+    /* Gender Option: Female */
+    div.input-group:nth-of-type(3) div.input-box:nth-of-type(2) input#b2 {
+        margin: 5% 0 0 25%;
+    }
+
+    /* Paypal */
+    div.input-group:nth-of-type(4) input#bc2 {
+        margin: 0 2% 5% 5%;
+    }
+
+    /* Credit Card Number */
+    div.input-group:nth-of-type(5) div.input-box input {
+        text-align: left;
+    }
+
+    /* CVC */
+    div.input-group:nth-of-type(6) div.input-box:first-of-type {
+        float: none;
+        width: 100%;
+        margin: 5% 0;
+    }
+
+    /* Expiry Details */
+    div.input-group:nth-of-type(6) div.input-box:nth-of-type(2) {
+        float: none;
+        display: flex;
+        width: 100%;
+        height: 2.5em;
+        margin: 5% 0;
+        padding-left: 0;
+    }
+
+    div.input-group:nth-of-type(6) div.input-box:nth-of-type(2) select {
+        flex: 50%;
+        padding: 0 20px;
+    }
+
+    button[type = 'submit'] {
+        width: 60%;
+        margin: 15% auto 0;
+    }
+}
+
+
+@media (min-width: 834px) and (max-width: 1024px) { /* iPad Pros */
+    /* Gender Option: Female */
+    div.input-group:nth-of-type(3) div.input-box:nth-of-type(2) input#b2 {
+        margin: 5% 0 0 25%;
+    }
+}
